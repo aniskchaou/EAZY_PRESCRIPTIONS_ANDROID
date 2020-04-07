@@ -1,11 +1,10 @@
 
 <p align="center"> 
-    <img src="screenshot.jpg" alt="Development of an Eazy Prescriptions mobile app">
+    <img src="screenshot.jpg" alt="Development of an Eazy Prescriptions mobile app"><br>
+    <b>Development of an Eazy Prescriptions mobile app</b>
  </p>
 <br>
-## TITLE
 
-Development of an Eazy Prescriptions mobile app
 
 ## OBJECTIVES
 
