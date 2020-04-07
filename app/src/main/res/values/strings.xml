@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Eazy Prescriptions</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="add_medicament">add</string>
+
+    <string name="enter">Liste Des Medicaments</string>
+    <string name="nom_usage">Nom Usage</string>
+    <string name="nom_molecule">Nom molecule</string>
+    <string name="dose">Dose (en mg)</string>
+    <string name="nom">nom ordonnance</string>
+    <string name="duree">duree (en Jours)</string>
+    <string name="OrdonnaceActive">Ordonnance Active</string>
+    <string name="TousOrdonnace">Tous</string>
+    <string name="lastname">aa</string>
+    <string name="firstname">fwsgd</string>
+</resources>

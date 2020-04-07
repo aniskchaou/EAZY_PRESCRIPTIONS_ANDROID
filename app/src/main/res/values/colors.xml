@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- colors utilisés -->
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#d81b60</color>
+    <color name="colorLabel">#000000</color>
+    <color name="anterieur">#06bf28</color>
+    <color name="prochain">#ff7300</color>
+    <color name="immediatement">#fd0414</color>
+    <color name="tard">#ffff00</color>
+    <color name="neutral">#0077ff</color>
+    <color name="blanc">#ffffff</color>
+    <color name="gris">#2d2c2c</color>
+</resources>

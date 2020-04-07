@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerItems">
+        <item>Gélule</item>
+        <item>Comprimé</item>
+        <item>Liquide</item>
+
+    </string-array>
+
+
+    <string-array name="spinnerINombreFois">
+        <item>3 fois</item>
+        <item>4 fois</item>
+        <item>5 fois</item>
+        <item>6 fois</item>
+    </string-array>
+
+
+    <string-array name="spinnerHeures">
+        <item>1 h</item>
+        <item>2 h</item>
+        <item>3 h</item>
+    </string-array>
+
+
+</resources>

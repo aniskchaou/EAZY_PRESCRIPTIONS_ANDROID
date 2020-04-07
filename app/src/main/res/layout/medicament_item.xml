@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+         <!-- data binding -->
+
+    <data>
+        <import type="android.support.v4.content.ContextCompat" />
+        <import type="kchaou.uha.fr.test.controllers.Converters"/>
+        <variable name="medicament"  type="kchaou.uha.fr.test.models.Medicament"/>
+        <variable name="doClick"  type="android.view.View.OnClickListener"/>
+        <variable name="doLongClick"  type="android.view.View.OnLongClickListener"/>
+    </data>
+   <!-- constaraint layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="@{(view) ->  doClick.onClick(view)}"
+        android:onLongClick="@{(view) ->  doLongClick.onLongClick(view)}">
+
+        <!-- date item -->
+        <TextView
+            android:id="@+id/dateitem"
+            android:layout_width="189dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="cursive"
+            android:text="@{medicament._nom_usage}"
+            android:textAppearance="@android:style/TextAppearance.Material.WindowTitle"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!-- nom molecule item -->
+        <TextView
+            android:id="@+id/nommoleculeitem"
+            android:layout_width="187dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="164dp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="10sp"
+            android:text="@{medicament._nom_molecule}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- photo  produit item-->
+        <ImageView
+            android:id="@+id/pictureitem"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="13dp"
+            android:scaleType="fitCenter"
+            app:bitmap="@{medicament.getPicture()}"
+            app:empty="@{@drawable/avatar}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.902"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@drawable/application_icon" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

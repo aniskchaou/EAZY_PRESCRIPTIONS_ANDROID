@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- data binding -->
+    <data>
+        <import type="android.support.v4.content.ContextCompat" />
+        <import type="kchaou.uha.fr.test.controllers.Converters"/>
+        <variable name="posologie"  type="kchaou.uha.fr.test.models.Posologie"/>
+        <variable name="doClick"  type="android.view.View.OnClickListener"/>
+        <variable name="doLongClick"  type="android.view.View.OnLongClickListener"/>
+    </data>
+
+
+    <!-- constraint layout -->
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view) ->  doClick.onClick(view)}"
+        android:onLongClick="@{(view) ->  doLongClick.onLongClick(view)}"
+        android:background="@{ContextCompat.getColor(context, Converters.FormatPrise(posologie.getEtatprise()))}">
+
+
+        <!-- date -->
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="357dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{Converters.FormatQuand(posologie.quand)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blanc"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.153" />
+
+
+
+        <!-- comment -->
+        <TextView
+
+            android:id="@+id/comment"
+            android:layout_width="362dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@{Converters.FormatComment(posologie.comment)}"
+            android:textColor="@color/blanc"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

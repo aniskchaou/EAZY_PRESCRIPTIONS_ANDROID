@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- data binding -->
+    <data>
+        <import type="android.support.v4.content.ContextCompat" />
+        <import type="kchaou.uha.fr.test.controllers.Converters"/>
+        <import  type="kchaou.uha.fr.test.models.Preferences"/>
+        <variable name="doPreferences"  type="android.view.View.OnClickListener"/>
+        <variable name="change_midi"  type="android.view.View.OnClickListener"/>
+        <variable name="change_matin"  type="android.view.View.OnClickListener"/>
+        <variable name="change_soir"  type="android.view.View.OnClickListener"/>
+        <variable name="preferences"  type="kchaou.uha.fr.test.models.Preferences"/>
+    </data>
+
+    <!-- constraint  layout-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+      <!-- label matin -->
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="412dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Matin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.268"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.877" />
+     <!-- label midi -->
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="324dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Midi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.415" />
+
+        <!-- midi -->
+        <TextView
+            android:id="@+id/midi"
+            android:layout_width="323dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="48dp"
+            android:background="@color/blanc"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPersonName"
+            android:onClick="@{(view) -> change_midi.onClick(view)}"
+            android:text="Cliquer içi pour choisir l'heure"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.599"
+            tools:background="@color/blanc"
+            tools:text="Cliquer içi pour choisir l'heure" />
+
+        <!-- matin -->
+        <TextView
+            android:id="@+id/matin"
+            android:layout_width="324dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/blanc"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPersonName"
+            android:onClick="@{(view) -> change_matin.onClick(view)}"
+            android:text="Cliquer içi pour choisir l'heure"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.295"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.265"
+            tools:background="@color/blanc"
+            tools:text="Cliquer içi pour choisir l'heure" />
+
+
+        <!-- label  soir -->
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="323dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="soir"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.694" />
+
+        <!-- soir -->
+        <TextView
+            android:id="@+id/soir"
+            android:layout_width="325dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/blanc"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textPersonName"
+            android:onClick="@{(view) -> change_soir.onClick(view)}"
+            android:text="Cliquer içi pour choisir l'heure"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.832" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
