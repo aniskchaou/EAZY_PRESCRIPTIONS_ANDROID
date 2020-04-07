@@ -19,9 +19,13 @@ This application contains 3 modules:
 ## TASKS
 
 • Create graphical interfaces using fragments
-• Apply the CAD pattern to the project architecture.
-• Liaise between GUI and java classes
+
+• Apply the DAO pattern to the project architecture.
+
+• Bind between GUI and java classes
+
 • Develop drug, dosage and prescription modules.
+
 • Test each module
 
 ## TECHNOLOGIES
