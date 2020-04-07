@@ -2,6 +2,7 @@
 <p align="center"> 
     <img src="screenshot.jpg" alt="Development of an Eazy Prescriptions mobile app">
  </p>
+<br>
 ## TITLE
 
 Development of an Eazy Prescriptions mobile app
