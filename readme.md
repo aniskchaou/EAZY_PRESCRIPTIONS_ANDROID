@@ -1,7 +1,11 @@
+
+<p align="center"> 
+    <img src="screenshot.jpg" alt="Development of an Eazy Prescriptions mobile app">
+ </p>
 ## TITLE
 
 Development of an Eazy Prescriptions mobile app
-![](screenshot.jpg)
+
 ## OBJECTIVES
 
 This academic project consists in developing a mobile app (Eazy Prescriptions) that reminds a person of the drugs, which should be taken.
